@@ -1,0 +1,652 @@
+{
+    "resourceType": "MedicationRequest",
+    "id": "600000044337",
+    "status": "stopped",
+    "intent": "plan",
+    "authoredOn": "2020-11-18T13:27:16.252Z",
+    "contained": [
+        {
+            "resourceType": "Medication",
+            "id": "490070013542.CATALOGUEITEM.PIV-6648.DRUG",
+            "extension": [
+                {
+                    "url": "DXC-HC-additionalMedsInfo",
+                    "extension": [
+                        {
+                            "url": "LZO/DXC-HC-isControlledDrug",
+                            "valueString": false
+                        },
+                        {
+                            "url": "LZO/DXC-HC-DurgProperty",
+                            "valueString": "CATALOGUEITEM"
+                        },
+                        {
+                            "url": "LZO/DXC-HC-ReasonForDiscontinuation",
+                                         "valueString": "CATALOGUEITEM"
+                            
+                        },
+                        {
+                            "url": "LZO/DXC-HC-ReasonForModification",
+                            "valueCodeableConcept": [
+                                {
+                                    "coding": [
+                                        {
+                                            "system": "MRSN",
+                                            "code": "CC_MEDPATCHOICE"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "url": "DXC-HC-MedicationIndication",
+                    "extension": [
+                        {
+                            "url": "INDICATION",
+                            "extension": [
+                                {
+                                    "url": "LZO/Term"
+                                },
+                                {
+                                    "url": "LZO/Type"
+                                },
+                                {
+                                    "url": "LZO/CodingschemeCode",
+                                    "valueString": "SNOMED CT"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "display": "paracetamol",
+                        "code": "490070013542"
+                    }
+                ]
+            },
+            "form": {
+                "coding": [
+                    {
+                        "display": "capsule",
+                        "code": "490070000369"
+                    }
+                ]
+            },
+            "ingredient": [
+                {
+                    "itemCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "/FDBE"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "DetectedIssue",
+            "id": "DI-001",
+            "status": "final",
+            "category": {
+                "coding": [
+                    {
+                        "code": "CC_DRUG_ALLERGY",
+                        "display": "Drug allergy"
+                    },
+                    {
+                        "code": "CC_SUBDP_ING,CC_SUBAG_ING",
+                        "display": "Ingredient"
+                    }
+                ],
+                "text": "Drug allergy - Ingredient"
+            },
+            "severity": "high",
+            "patient": {
+                "reference": "Patient/CSC0000454"
+            },
+            "date": "2020-11-17T12:22:15Z",
+            "detail": "Patient record shows potential sensitivity to Paracetamol. You have selected paracetamol which contains paracetamol. Severity(Reaction): .",
+            "mitigation": [
+                {
+                    "action": {
+                        "coding": [
+                            {
+                                "system": "WARSN",
+                                "code": "CC_Clinicalapp",
+                                "display": "Clinically appropriate"
+                            }
+                        ]
+                    },
+                    "date": "2020-11-18T13:27:16.256Z",
+                    "author": {
+                        "reference": "Practitioner/600000257052"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "DetectedIssue",
+            "id": "DI-002",
+            "status": "final",
+            "category": {
+                "coding": [
+                    {
+                        "code": "CC_DRUG_PRECAUTION",
+                        "display": "Precaution"
+                    },
+                    {
+                        "code": "CC_SUBCI_ALWAYS",
+                        "display": "Always show"
+                    }
+                ],
+                "text": "Precaution - Always show"
+            },
+            "severity": "low",
+            "patient": {
+                "reference": "Patient/CSC0000454"
+            },
+            "date": "2020-11-17T12:22:15Z",
+            "detail": "General precautions apply for some products, review ~monograph~ of intended product.",
+            "mitigation": [
+                {
+                    "action": {
+                        "coding": [
+                            {
+                                "system": "WARSN",
+                                "code": "CC_Clinicalapp",
+                                "display": "Clinically appropriate"
+                            }
+                        ]
+                    },
+                    "date": "2020-11-18T13:27:16.256Z",
+                    "author": {
+                        "reference": "Practitioner/600000257052"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "DetectedIssue",
+            "id": "DI-003",
+            "status": "final",
+            "category": {
+                "coding": [
+                    {
+                        "code": "CC_DRUG_WARNING",
+                        "display": "Warning"
+                    },
+                    {
+                        "code": "CC_SUBCI_ALWAYS",
+                        "display": "Always show"
+                    }
+                ],
+                "text": "Warning"
+            },
+            "severity": "low",
+            "patient": {
+                "reference": "Patient/CSC0000454"
+            },
+            "date": "2020-11-17T12:22:15Z",
+            "detail": "General warnings apply, review ~monograph~.",
+            "mitigation": [
+                {
+                    "action": {
+                        "coding": [
+                            {
+                                "system": "WARSN",
+                                "code": "CC_Clinicalapp",
+                                "display": "Clinically appropriate"
+                            }
+                        ]
+                    },
+                    "date": "2020-11-18T13:27:16.256Z",
+                    "author": {
+                        "reference": "Practitioner/600000257052"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "DetectedIssue",
+            "id": "DRC-001",
+            "status": "final",
+            "category": {
+                "coding": [
+                    {
+                        "code": "CC_MAXSGLEDOSE",
+                        "display": "Maximum single dose"
+                    },
+                    {
+                        "code": "DDT-1",
+                        "display": "Maintenance"
+                    }
+                ],
+                "text": "Maintenance - Maximum single dose"
+            },
+            "severity": "moderate",
+            "patient": {
+                "reference": "Patient/CSC0000454"
+            },
+            "date": "2020-11-17T12:22:27Z",
+            "detail": "1 g   exceeds the typical maximum single dose of 1 g  ",
+            "mitigation": [
+                {
+                    "action": {
+                        "coding": [
+                            {
+                                "system": "WARSN",
+                                "code": "CC_Clinicalapp",
+                                "display": "Clinically appropriate"
+                            }
+                        ]
+                    },
+                    "date": "2020-11-18T13:27:16.256Z",
+                    "author": {
+                        "reference": "Practitioner/600000257052"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "DetectedIssue",
+            "id": "DRC-002",
+            "status": "final",
+            "category": {
+                "coding": [
+                    {
+                        "code": "CC_LOWDOSE",
+                        "display": "Low dose"
+                    },
+                    {
+                        "code": "DDT-1",
+                        "display": "Maintenance"
+                    }
+                ],
+                "text": "Maintenance - Low dose"
+            },
+            "severity": "low",
+            "patient": {
+                "reference": "Patient/CSC0000454"
+            },
+            "date": "2020-11-17T12:22:27Z",
+            "detail": "1 g  given FOUR times a DAY is below the typical dose of 500 mg  every 6 hours",
+            "mitigation": [
+                {
+                    "action": {
+                        "coding": [
+                            {
+                                "system": "WARSN",
+                                "code": "CC_Clinicalapp",
+                                "display": "Clinically appropriate"
+                            }
+                        ]
+                    },
+                    "date": "2020-11-18T13:27:16.256Z",
+                    "author": {
+                        "reference": "Practitioner/600000257052"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "DetectedIssue",
+            "id": "DRC-003",
+            "status": "final",
+            "category": {
+                "coding": [
+                    {
+                        "code": "CC_HIGHDOSE",
+                        "display": "High dose"
+                    },
+                    {
+                        "code": "DDT-1",
+                        "display": "Maintenance"
+                    }
+                ],
+                "text": "Maintenance - High dose"
+            },
+            "severity": "moderate",
+            "patient": {
+                "reference": "Patient/CSC0000454"
+            },
+            "date": "2020-11-17T12:22:27Z",
+            "detail": "1 g  given FOUR times a DAY is above the typical dose of 1 g  every 4 hours",
+            "mitigation": [
+                {
+                    "action": {
+                        "coding": [
+                            {
+                                "system": "WARSN",
+                                "code": "CC_Clinicalapp",
+                                "display": "Clinically appropriate"
+                            }
+                        ]
+                    },
+                    "date": "2020-11-18T13:27:16.256Z",
+                    "author": {
+                        "reference": "Practitioner/600000257052"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "DetectedIssue",
+            "id": "DRC-004",
+            "status": "final",
+            "category": {
+                "coding": [
+                    {
+                        "code": "CC_MAXDOSE",
+                        "display": "Maximum dose"
+                    },
+                    {
+                        "code": "DDT-1",
+                        "display": "Maintenance"
+                    }
+                ],
+                "text": "Maintenance - Maximum dose"
+            },
+            "severity": "moderate",
+            "patient": {
+                "reference": "Patient/CSC0000454"
+            },
+            "date": "2020-11-17T12:22:27Z",
+            "detail": "1 g  given FOUR times a DAY exceeds the typical maximum dose of 1 g  every 4 hours",
+            "mitigation": [
+                {
+                    "action": {
+                        "coding": [
+                            {
+                                "system": "WARSN",
+                                "code": "CC_Clinicalapp",
+                                "display": "Clinically appropriate"
+                            }
+                        ]
+                    },
+                    "date": "2020-11-18T13:27:16.256Z",
+                    "author": {
+                        "reference": "Practitioner/600000257052"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "DetectedIssue",
+            "id": "DRC-005",
+            "status": "final",
+            "category": {
+                "coding": [
+                    {
+                        "code": "CC_LOWFREQ",
+                        "display": "Low frequency"
+                    },
+                    {
+                        "code": "DDT-1",
+                        "display": "Maintenance"
+                    }
+                ],
+                "text": "Maintenance - Low frequency"
+            },
+            "severity": "low",
+            "patient": {
+                "reference": "Patient/CSC0000454"
+            },
+            "date": "2020-11-17T12:22:27Z",
+            "detail": "FOUR times a DAY is below the typical lowest frequency of every 6 hours",
+            "mitigation": [
+                {
+                    "action": {
+                        "coding": [
+                            {
+                                "system": "WARSN",
+                                "code": "CC_Clinicalapp",
+                                "display": "Clinically appropriate"
+                            }
+                        ]
+                    },
+                    "date": "2020-11-18T13:27:16.256Z",
+                    "author": {
+                        "reference": "Practitioner/600000257052"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "DetectedIssue",
+            "id": "DRC-006",
+            "status": "final",
+            "category": {
+                "coding": [
+                    {
+                        "code": "CC_HIGHFREQ",
+                        "display": "High frequency"
+                    },
+                    {
+                        "code": "DDT-1",
+                        "display": "Maintenance"
+                    }
+                ],
+                "text": "Maintenance - High frequency"
+            },
+            "severity": "moderate",
+            "patient": {
+                "reference": "Patient/CSC0000454"
+            },
+            "date": "2020-11-17T12:22:27Z",
+            "detail": "FOUR times a DAY is above the typical highest frequency of every 4 hours",
+            "mitigation": [
+                {
+                    "action": {
+                        "coding": [
+                            {
+                                "system": "WARSN",
+                                "code": "CC_Clinicalapp",
+                                "display": "Clinically appropriate"
+                            }
+                        ]
+                    },
+                    "date": "2020-11-18T13:27:16.256Z",
+                    "author": {
+                        "reference": "Practitioner/600000257052"
+                    }
+                }
+            ]
+        }
+    ],
+    "category": {
+        "coding": [
+            {
+                "system": "IPPMAPRCTYP",
+                "code": "CC_MED_TYP_OP",
+                "display": "Outpatient"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/CSC0000454"
+    },
+    "context": {
+        "reference": "Encounter/ENC0005686"
+    },
+    "medicationReference": {
+        "reference": "#/Medication/490070013542.CATALOGUEITEM.PIV-6648.DRUG"
+    },
+    "requester": {
+        "agent": {
+            "reference": "Practitioner/600000257052"
+        }
+    },
+    "dosageInstruction": [
+        {
+            "sequence": 1,
+            "doseQuantity": {
+                "value": "1",
+                "unit": "g",
+                "system": "Valueset/VS00104",
+                "code": "490070000363"
+            },
+            "maxDosePerPeriod": {
+                "numerator": {
+                    "value": "1",
+                    "unit": "g",
+                    "system": "Valueset/VS00104",
+                    "code": "490070000363"
+                }
+            },
+            "additionalInstruction": [
+                {
+                    "coding": [
+                        {
+                            "system": "Valueset/RELATIONSHIPWITHMEALS"
+                        }
+                    ]
+                }
+            ],
+            "site": {
+                "coding": [
+                    {
+                        "system": "Valueset/AdminSite"
+                    }
+                ]
+            },
+            "route": {
+                "coding": [
+                    {
+                        "system": "/FDBE/Route",
+                        "code": "490070000673",
+                        "display": "Oral"
+                    }
+                ]
+            },
+            "method": {
+                "coding": [
+                    {
+                        "system": "Valueset/Adminmethod"
+                    }
+                ]
+            },
+            "timing": {
+                "event": [
+                    "2020-11-18T13:26:50.762Z"
+                ],
+                "repeat": {
+                    "boundsPeriod": {
+                        "start": "2020-11-18T13:26:50.762Z"
+                    },
+                    "frequency": 4,
+                    "frequencyMax": 0,
+                    "periodUnit": "d",
+                    "duration": "6",
+                    "durationUnit": "d",
+                    "dayOfWeek": [],
+                    "when": [],
+                    "timeOfDay": [
+                        "360",
+                        "720",
+                        "1080",
+                        "1320"
+                    ]
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "FDBE",
+                            "code": "490070000512",
+                            "display": "FOUR times a DAY"
+                        }
+                    ]
+                }
+            },
+            "extension": [
+                {
+                    "url": "DXC-HC-additionalDoseInfo",
+                    "extension": [
+                        {
+                            "url": "https://cscnextdev.atlassian.net/wiki/display/LAE/DXC-HC-doseType",
+                            "valueString": "Normal"
+                        },
+                        {
+                            "url": "DXC-HC-doseStrength",
+                            "valueString": "500mg"
+                        }
+                    ]
+                },
+                {
+                    "url": "Valueset/Durationtype",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "Valueset/Durationtype",
+                                "code": "CC_MEDDRSN1",
+                                "display": "Day(s)"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "url": "lzo/effectiveperiod",
+                    "valuePeriod": {
+                        "start": "2020-11-18T13:26:50.762Z"
+                    }
+                },
+                {
+                    "url": "Valueset/Strength",
+                    "valueString": "500mg"
+                }
+            ]
+        }
+    ],
+    "dispenseRequest": {
+        "validityPeriod": {
+            "start": "2020-11-17T12:22:40.000Z"
+        }
+    },
+    "note": [
+        {
+            "text": "completed by amendment"
+        }
+    ],
+    "meta": {
+        "tag": [
+            {
+                "code": "600000164149",
+                "system": "Location"
+            }
+        ]
+    },
+    "detectedIssue": [
+        {
+            "reference": "#/DetectedIssue/DI-001"
+        },
+        {
+            "reference": "#/DetectedIssue/DI-002"
+        },
+        {
+            "reference": "#/DetectedIssue/DI-003"
+        },
+        {
+            "reference": "#/DetectedIssue/DRC-001"
+        },
+        {
+            "reference": "#/DetectedIssue/DRC-002"
+        },
+        {
+            "reference": "#/DetectedIssue/DRC-003"
+        },
+        {
+            "reference": "#/DetectedIssue/DRC-004"
+        },
+        {
+            "reference": "#/DetectedIssue/DRC-005"
+        },
+        {
+            "reference": "#/DetectedIssue/DRC-006"
+        }
+    ]
+}
